@@ -68,10 +68,10 @@ export const storyData = {
       period: "1–4 septembrie 2026 • Oradea • CDTO 2026",
       location: "Oradea • CDTO 2026",
       title: "Ne-am văzut, pe bune, fără ecran",
-      story: "După luni de FaceTime, am lăsat telefonul jos și am ieșit la primul date adevărat.",
+      story: "După luni de vorbit prin poze pe insta, am lăsat telefonul jos și am ieșit la primul date adevărat.",
       dates: [
-        { day: "1 septembrie", note: "Am ajuns la Oradea cu emoții (eu mai multe, recunosc)" },
-        { day: "3 septembrie", note: "Primul nostru date adevărat 🥹" },
+        { day: "1 septembrie", note: "Când am ajuns aveam numai gândul că ne vom vedea și eram super entuziasmat" },
+        { day: "3 septembrie", note: "Primul nostru „date” (deși habar n-aveam pe atunci că e date sau că vom fi împreună)" },
         { day: "4 septembrie (03:00–09:00)", note: "O dimineață de neuitat, începutul a tot ce a urmat" }
       ],
       clockTitle: "4 septembrie • 03:00 → 09:00",
@@ -148,13 +148,14 @@ export const storyData = {
     waxPrompt: "Apasă pe sigiliu ca să rupi ceara. Atenție, e scrisoare cu sentimente 🫣",
     date: "2 octombrie 2026",
     content: [
-      "Cati a mea,",
-      "Dacă mi-ar fi spus cineva în primăvară că într-un hol de hotel din Suceava, printre ecusoane de olimpiadă, o să dau peste persoana cu care vreau să construiesc ceva, aș fi zis „stai, ce?”. Dar viața a avut un scenariu mai bun decât toate scenariile mele.",
-      "Lumea a tăcut când te-am zărit, iar ochii tăi m-au oprit pe loc. Apoi au venit kilometrii, tu la Târgu Mureș, eu la Piatra Neamț, și nopțile pierdute pe FaceTime. Am dormit puțin, am râs mult, am adormit cu căștile în urechi, și dacă m-ai întreba dacă a meritat, ți-aș zice: fiecare minut. Telefonul nu mai era o bucată rece de sticlă, ci puntea care mă aducea lângă tine.",
-      "La Oradea, pe 4 septembrie, timpul a mers altfel, iar pe 19 septembrie am spus „noi” cu toată convingerea. Nu pentru că distanța ar fi dispărut, ci pentru că nu mai părea mai puternică decât ce construim.",
-      "Azi facem o lună și mă bucur că ne vedem aproape zilnic, chiar și când ne desparte un ecran. Vreau să fiu omul cu care poți vorbi, râde, face mișto și construi, mai ales în zilele în care distanța pare mai mare.",
-      "Te iubesc dincolo de kilometri, catiii (da, și „Bebica”, că altfel nu e la fel 😌).",
-      "Al tău, Ștefan ❤️"
+      "Dragă Cati,",
+      "Dacă mi-ar fi spus cineva în primăvară că în holul de la Hotel Continental din Suceava, printre ecusoane de olimpiadă, o să cunosc persoana cu care vreau să fiu, i-aș fi zis „sure, sigur”. Dar uite că s-a întâmplat.",
+      "I gotta admit, când te-am văzut nu m-am mai gândit la nimic altceva. Apoi au urmat kilometrii, tu la Târgu Mureș, eu la Piatra Neamț, mesaje pe Insta (vara mai puțin, ce-i drept) și seri pe FaceTime în care mi-ai dat ragebait fără nicio remușcare. Dacă m-ai întreba dacă a meritat, ți-aș spune că da, chiar și așa.",
+      "La Oradea, la CDTO 2026, ne-am văzut în sfârșit. Dimineața de 4 septembrie a fost amazing, wild și fulfilling, o experiență nouă pentru mine, care ne-a apropiat mai mult ca niciodată. La 9:00, când a trebuit să plec, ne-am îmbrățișat și ne-am sărutat, iar tu mi-ai dat ca amintire ecusonul tău de la CDTO. Eu ți-am dat „beteala Michael Jackson” de la ultimul party. Nu sunt lucruri mari, dar contează pentru mine, și mă gândesc la tine de fiecare dată când le văd.",
+      "Pe 19 septembrie am zis „noi” și am simțit că e ceva real. Distanța nu dispăruse, dar nu mai conta atât de mult.",
+      "Azi facem o lună. Mă bucur că vorbim aproape în fiecare zi, chiar dacă de multe ori doar printr-un ecran. Vreau să fiu omul cu care poți vorbi, râde și face mișto de orice, mai ales în zilele când distanța se simte mai tare.",
+      "Dragul tău iubit, Ștefan"
     ]
   }
 };
+

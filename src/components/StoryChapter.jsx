@@ -542,15 +542,27 @@ export function StoryChapter({
             )}
           </AnimatePresence>
 
-          <div className="mt-10 flex flex-col items-center gap-3 text-center">
+          <div className="mt-10 flex flex-col items-center gap-4 text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-rose-50 border border-rose-200/90 px-5 py-2 text-xs sm:text-sm font-semibold text-rose-900 shadow-xs">
               <Sparkles className="h-4 w-4 text-rose-600" />
-              <span>{chapter.finalPrompt?.badge || "Ultimul secret 💌"}</span>
+              <span>{chapter.finalPrompt?.badge || "Amintiri & Surprize 🎁"}</span>
             </div>
 
             <p className="max-w-lg font-serif text-base sm:text-lg italic text-rose-900/90 font-medium">
-              {chapter.finalPrompt?.message || "A rămas o scrisoare închisă în ceară roșie. Apasă pe pecete, e pentru tine."}
+              {chapter.finalPrompt?.message || "Am adunat aici amintirile noastre speciale și o scrisoare secretă."}
             </p>
+
+            <button
+              type="button"
+              onClick={() => {
+                if (onChapterComplete) onChapterComplete(chapter.stageIndex);
+                if (onScrollToNext) onScrollToNext();
+              }}
+              className="group mt-2 flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
+            >
+              <span>Descoperă amintirile & surprizele noastre ➜</span>
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </button>
           </div>
         </div>
       )}

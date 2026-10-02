@@ -92,7 +92,6 @@ export function LetterModal({ isOpen, onClose, letterData }) {
                 {letterData?.content?.map((paragraph, index) => {
                   const isGreeting = index === 0;
                   const isFirstParagraph = index === 1;
-                  const isClosing = index === letterData.content.length - 2;
                   const isSignature = index === letterData.content.length - 1;
 
                   if (isGreeting) {
@@ -112,7 +111,7 @@ export function LetterModal({ isOpen, onClose, letterData }) {
                     const restText = paragraph.slice(1);
 
                     return (
-                      <p key={index} className="text-left text-[#22171B]">
+                      <p key={index} className="text-left text-[#22171B] leading-relaxed">
                         <span className="float-left mr-3 mt-1 font-serif text-5xl font-normal leading-none text-rose-900 sm:text-6xl">
                           {firstLetter}
                         </span>
@@ -121,20 +120,9 @@ export function LetterModal({ isOpen, onClose, letterData }) {
                     );
                   }
 
-                  if (isClosing) {
-                    return (
-                      <p
-                        key={index}
-                        className="pt-6 text-left font-serif italic text-rose-900 text-xl sm:text-2xl leading-relaxed"
-                      >
-                        {paragraph}
-                      </p>
-                    );
-                  }
-
                   if (isSignature) {
                     return (
-                      <div key={index} className="pt-4 text-right">
+                      <div key={index} className="pt-6 text-right">
                         <p className="font-serif text-2xl font-bold tracking-wide text-rose-950 sm:text-3xl inline-block border-b-2 border-rose-300/60 pb-1">
                           {paragraph}
                         </p>
@@ -143,7 +131,7 @@ export function LetterModal({ isOpen, onClose, letterData }) {
                   }
 
                   return (
-                    <p key={index} className="text-left text-[#22171B]">
+                    <p key={index} className="text-left text-[#22171B] leading-relaxed">
                       {paragraph}
                     </p>
                   );

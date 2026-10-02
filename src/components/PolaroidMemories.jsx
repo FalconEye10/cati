@@ -14,7 +14,7 @@ const keepsakeItems = [
     tag: 'Suceava',
     rotation: '-rotate-2',
     snippet: 'Hotel Continental, Suceava',
-    fullThought: 'Când te-am văzut, ai stârnit o sclipire și ai dat o scânteie în ochii mei.'
+    fullThought: 'Când te-am văzut prima dată, sincer, mi-a sărit inima din piept și nu m-am mai gândit la nimic altceva.'
   },
   {
     id: 'cati-tgmures',
@@ -25,7 +25,7 @@ const keepsakeItems = [
     tag: 'Târgu Mureș',
     rotation: 'rotate-1',
     snippet: 'Piatra Neamț ↔ Târgu Mureș (220 km)',
-    fullThought: 'Zâmbetul tău pe ecran a făcut 220 km să pară 2 pași.'
+    fullThought: 'Zâmbetul tău prin ecran făcea kilometrii să nu mai conteze deloc.'
   },
   {
     id: 'impreuna-oradea',
@@ -36,7 +36,7 @@ const keepsakeItems = [
     tag: 'CDTO',
     rotation: '-rotate-1',
     snippet: '03:00 → 09:00',
-    fullThought: 'De la 3 la 9, timpul a stat. Ne vedem curând, promit.'
+    fullThought: 'De la 3 dimineața până la 9, timpul a zburat. A fost cea mai tare dimineață.'
   }
 ];
 
@@ -58,13 +58,13 @@ export function PolaroidMemories() {
       <div className="mb-8">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-200 bg-rose-50/80 px-4 py-1.5 text-sm font-semibold text-rose-800 uppercase tracking-wider">
           <Sparkles className="h-4 w-4 text-rose-600" />
-          Amintiri în buzunar
+          Poze & Momente 📸
         </span>
         <h3 className="mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
-          Detalii mici, efecte mari
+          Momente dragi nouă
         </h3>
         <p className="mt-2 text-sm text-ink-subtle">
-          Atinge un polaroid ca să-l întorci.
+          Apasă pe o poză ca să citești ce am scris pe spate.
         </p>
       </div>
 

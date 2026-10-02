@@ -189,7 +189,7 @@ export function StoryChapter({
                 <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
                   <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
                   <span>
-                    {chapter.postUnlockPrompt || "Prima filă e deschisă. Hai spre capitolul următor, e unul cu mulți kilometri."}
+                    {chapter.postUnlockPrompt || "Hai mai departe, că au urmat mulți kilometri între noi."}
                   </span>
                 </div>
 
@@ -338,12 +338,12 @@ export function StoryChapter({
               <span className="mt-2 text-sm sm:text-base opacity-90 font-serif italic text-rose-950 max-w-md text-center">
                 {chapter.clockStates?.[currentHourDisplay] || (
                   currentHourDisplay === 9
-                    ? "Ora 9: cea mai recentă vedere, nu ultima, promit."
+                    ? "Ora 9: a trebuit să plec, dar a fost cea mai tare dimineață."
                     : currentHourDisplay >= 7
-                    ? "Dimineața e aici, noi suntem încă în bula noastră."
+                    ? "Ora 7: a venit dimineața și noi tot împreună eram."
                     : currentHourDisplay >= 5
-                    ? "Se face lumină la Oradea și nici nu ne pasă."
-                    : "Ora 3: oamenii normali dorm. Noi, deloc."
+                    ? "Ora 5: se lumina afară la Oradea și nici nu ne păsa de somn."
+                    : "Ora 3: normal lumea dormea. Noi povesteam și râdeam."
                 )}
               </span>
             </div>
@@ -353,7 +353,7 @@ export function StoryChapter({
               <div className="mt-4 flex flex-col items-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-amber-50/90 border border-amber-200/80 px-4 py-1.5 text-xs sm:text-sm font-medium text-amber-950 shadow-xs">
                   <Clock className="h-4 w-4 text-amber-700 animate-spin" />
-                  <span>{chapter.clockProgressMessage || "Orele trec spre 09:00… dar nu te supăra, urmează mai bine."}</span>
+                  <span>{chapter.clockProgressMessage || "Orele trec spre 09:00… stai să vezi poza de dimineață 👀"}</span>
                 </div>
               </div>
             )}
@@ -370,11 +370,11 @@ export function StoryChapter({
                   {/* Badge de evidențiere a orei 09:00 */}
                   <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-rose-100/90 border border-rose-300 px-4 py-1.5 text-xs sm:text-sm font-semibold text-rose-950 shadow-xs">
                     <Heart className="h-4 w-4 fill-rose-600 text-rose-600" />
-                    <span>{chapter.cardFinalBadge || "Ora 09:00 • Cea mai recentă, nu ultima"}</span>
+                    <span>{chapter.cardFinalBadge || "Ora 09:00 • Dimineața de 4 septembrie"}</span>
                   </div>
 
                   <p className="text-xs sm:text-sm font-serif italic text-rose-900/90 max-w-md mx-auto mb-5 font-medium leading-relaxed">
-                    {chapter.cardFinalSubtitle || "Nu e un adio, e un „pe curând” 🫶"}
+                    {chapter.cardFinalSubtitle || "Momentul în care ne-am dat amintirile 🫶"}
                   </p>
 
                   {/* Fotografia autentică din dimineața de la Oradea */}
@@ -413,7 +413,7 @@ export function StoryChapter({
                 <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
                   <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
                   <span>
-                    {chapter.nextPrompt || "Și s-a întâmplat ceva și mai frumos. Hai să vezi."}
+                    {chapter.nextPrompt || "Și de aici încolo lucrurile au devenit și mai faine. Hai să vezi."}
                   </span>
                 </div>
 

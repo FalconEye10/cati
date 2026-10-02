@@ -5,12 +5,12 @@
 
 export const storyData = {
   vault: {
-    badge: "Capsula timpului ⏳",
+    badge: "Pentru tine 🔐",
     title: "Ceva pentru Cati",
-    subtitle: "Povestea noastră, închisă într-un seif. Nu e cine știe ce secret, dar e al nostru.",
+    subtitle: "Am adunat aici amintirile noastre. Deschide-l să vezi.",
     openButtonText: "Deschide seiful 🔓",
-    hint: "Apasă pe buton și lasă amintirile să iasă la joacă.",
-    instruction3D: "Apasă sau trage de volan ca să deschizi seiful"
+    hint: "Apasă pe buton și hai să începem.",
+    instruction3D: "Trage de rotiță sau apasă pe ea ca să-l deschizi"
   },
 
   chapters: [
@@ -20,19 +20,19 @@ export const storyData = {
       number: "01",
       badge: "Unde a început totul",
       location: "Hotel Continental, Suceava • 28 martie 2026",
-      event: "Olimpiada Națională de Germană (și, surprinzător, nu pentru germană am ținut minte)",
+      event: "Olimpiada de Germană (și sincer, nu germana a contat)",
       title: "Privirea din lobby",
-      story: "Hol plin de ecusoane, oameni random, agitație. Și deodată: ea. Restul lumii a dat mute.",
+      story: "Holul plin de ecusoane, multă agitație... și dintr-o dată te-am văzut pe tine. În secunda aia nu m-am mai gândit la nimic altceva.",
       card: {
         frontTitle: "Privirea din lobby",
-        frontSubtitle: "Olimpiada de Germană, Suceava 2026",
+        frontSubtitle: "Suceava 2026",
         image: "/photos/olimpiada-suceava.jpg",
-        frontNote: "Atinge poza ca să afli ce gândeam 🤭",
-        secretThought: "Când te-am văzut, ai stârnit o sclipire și ai dat o scânteie în ochii mei",
+        frontNote: "Apasă pe poză să vezi ce-mi trecea prin cap 🤭",
+        secretThought: "Când te-am văzut prima dată, sincer, mi-a sărit inima din piept și nu m-am mai gândit la nimic altceva.",
         author: "Ștefan"
       },
-      preFlipPrompt: "Întoarce poza, are ceva scris pe spate 👀",
-      postUnlockPrompt: "Prima filă e deschisă. Hai spre capitolul următor, e unul cu mulți kilometri.",
+      preFlipPrompt: "Apasă pe poză, are ceva scris pe spate 👀",
+      postUnlockPrompt: "Hai mai departe, că au urmat mulți kilometri între noi.",
       nextButtonText: "Hai mai departe ➜"
     },
 
@@ -40,23 +40,23 @@ export const storyData = {
       id: "distance-bridge",
       stageIndex: 2,
       number: "02",
-      badge: "Distanța, dar cu stil",
+      badge: "Kilometri mulți, dar nu ne-a păsat",
       period: "Primăvara și vara 2026",
       title: "Ne vedem la Oradea?",
-      story: "El din Piatra Neamț, ea din Târgu Mureș. Matematic, la mijloc. Practic, Oradea, la CDTO 2026.",
+      story: "Eu la Piatra Neamț, tu la Târgu Mureș. Ne despărțeau ore bune de drum, dar aveam în cap doar un singur lucru: să ne vedem la Oradea.",
       originCity: "Piatra Neamț (Ștefan)",
       destinationCity: "Târgu Mureș (Cati)",
-      commonMeetingPoint: "Oradea • loc de întâlnire",
+      commonMeetingPoint: "Oradea • unde ne-am văzut",
       totalDistanceKm: 220,
-      sliderGuide: "Glisează și adu-ne mai aproape: Oradea 📍",
+      sliderGuide: "Trage de cerc și adu-ne mai aproape la Oradea 📍",
       connectedTitle: "Ne-am luat în brațe la Oradea 🥹",
       connectedSubtitle: "CDTO 2026 • 1–4 septembrie • 0 kilometri",
-      connectedDescription: "Sute de kilometri, mii de „bună dimineața” pe telefon, și în sfârșit… la 0 km.",
+      connectedDescription: "Sute de kilometri, mii de poze pe Insta și mesaje, și în sfârșit… am fost la 0 kilometri unul de altul.",
       heartbeatButtonText: "Trimite o bătaie de inimă spre Oradea 💌",
       heartbeatUnpressed: "Apasă ca să trimiți un puls din ambele orașe",
-      heartbeatPressed: "Inimile noastre s-au întâlnit la Oradea ❤️",
-      activeAdvancePrompt: "Inimile s-au adunat! Hai spre Oradea.",
-      blockedAdvancePrompt: "Trage sliderul la 0 km și trimite o bătaie de inimă, altfel nu pornim 😌",
+      heartbeatPressed: "Ne-am sincronizat inimile la Oradea ❤️",
+      activeAdvancePrompt: "Gata, suntem la 0 km! Hai să vezi cum a fost la Oradea.",
+      blockedAdvancePrompt: "Trage sliderul până la capăt și trimite o inimioară, altfel nu pornim 😌",
       nextButtonText: "Hai la Oradea ➜"
     },
 
@@ -67,27 +67,27 @@ export const storyData = {
       badge: "În sfârșit, pe bune",
       period: "1–4 septembrie 2026 • Oradea • CDTO 2026",
       location: "Oradea • CDTO 2026",
-      title: "Ne-am văzut, pe bune, fără ecran",
+      title: "Ne-am văzut pe bune, nu prin ecran",
       story: "După luni de vorbit prin poze pe insta, am lăsat telefonul jos și am ieșit la primul date adevărat.",
       dates: [
-        { day: "1 septembrie", note: "Când am ajuns aveam numai gândul că ne vom vedea și eram super entuziasmat" },
-        { day: "3 septembrie", note: "Primul nostru „date” (deși habar n-aveam pe atunci că e date sau că vom fi împreună)" },
-        { day: "4 septembrie (03:00–09:00)", note: "O dimineață de neuitat, începutul a tot ce a urmat" }
+        { day: "1 septembrie", note: "Când am ajuns aveam gânduri că ne vom vedea și eram entuziasmat" },
+        { day: "3 septembrie", note: "Primul nostru „date” (că nu aveam să știm că era date sau că aveam să fim împreună)" },
+        { day: "4 septembrie (03:00–09:00)", note: "Dimineața aia genială, când am stat amândoi de vorbă până la 9 dimineața" }
       ],
-      clockTitle: "4 septembrie • 03:00 → 09:00",
+      clockTitle: "4 septembrie • de la 03:00 la 09:00",
       clockStates: {
-        3: "Ora 3: oamenii normali dorm. Noi, deloc.",
-        5: "Se face lumină la Oradea și nici nu ne pasă.",
-        7: "Dimineața e aici, noi suntem încă în bula noastră.",
-        9: "Ora 9: cea mai recentă vedere, nu ultima, promit."
+        3: "Ora 3: normal lumea dormea. Noi povesteam și râdeam.",
+        5: "Ora 5: se lumina afară la Oradea și nici nu ne păsa de somn.",
+        7: "Ora 7: a venit dimineața și noi tot împreună eram.",
+        9: "Ora 9: a trebuit să plec, dar a fost cea mai tare dimineață."
       },
-      clockProgressMessage: "Orele trec spre 09:00… dar nu te supăra, urmează mai bine.",
-      cardFinalBadge: "Ora 09:00 • Cea mai recentă, nu ultima",
-      cardFinalSubtitle: "Nu e un adio, e un „pe curând” 🫶",
+      clockProgressMessage: "Orele trec spre 09:00… stai să vezi poza de dimineață 👀",
+      cardFinalBadge: "Ora 09:00 • Dimineața de 4 septembrie",
+      cardFinalSubtitle: "Momentul în care ne-am dat amintirile 🫶",
       photoLabel: "4 septembrie • Oradea",
-      intimateQuote: "De la 3 dimineața la 9, am trăit clipe pe care nu le uit. Nu a fost ultima dată, doar cea mai recentă.",
+      intimateQuote: "De la 3 dimineața până la 9, au fost orele care ne-au apropiat cel mai mult. Ți-am dat beteala, mi-ai dat ecusonul, și am știut că e ceva special.",
       signature: "— 4 septembrie 2026, ora 09:00 • Oradea",
-      nextPrompt: "Și s-a întâmplat ceva și mai frumos. Hai să vezi.",
+      nextPrompt: "Și de aici încolo lucrurile au devenit și mai faine. Hai să vezi.",
       nextButtonText: "Hai să vezi ➜"
     },
 
@@ -95,7 +95,7 @@ export const storyData = {
       id: "official-us",
       stageIndex: 4,
       number: "04",
-      badge: "Level up 🎉",
+      badge: "Pasul cel mare 🎉",
       date: "4 septembrie → 19 septembrie 2026",
       title: "Oficial «Noi»",
       words: {
@@ -103,9 +103,9 @@ export const storyData = {
         second: "eu",
         united: "noi"
       },
-      message: "Ziua în care ne-am zis tot ce simțeam. Fără cod secret.",
+      message: "Ziua în care ne-am zis pe bune ce simțim și am devenit un cuplu.",
       facetimeMemory: {
-        tag: "Nopțile noastre la FaceTime 🌙",
+        tag: "Serile și nopțile noastre la telefon 🌙",
         calls: [
           {
             id: "record",
@@ -114,9 +114,9 @@ export const storyData = {
             durationHuman: "5 ore și 19 minute",
             image: "/photos/facetime-real-2.jpg",
             category: "Record all-time 🏆",
-            title: "Recordul nostru",
-            highlight: "Somnul a pierdut, noi am câștigat",
-            description: "Am râs, am povestit, am adormit cu căștile în urechi. Somnul a pierdut, noi am câștigat."
+            title: "Recordul nostru de vorbit",
+            highlight: "5 ore și 19 minute fără pauză",
+            description: "Am râs, am povestit și mi-ai dat ragebait de nu mai știam de mine, până am adormit amândoi cu căștile în urechi."
           },
           {
             id: "relationship",
@@ -125,19 +125,19 @@ export const storyData = {
             durationHuman: "1 oră și 53 de minute",
             image: "/photos/facetime-real-1.jpg",
             category: "Cel mai bine folosit timp 🥹",
-            title: "Apelul în care am devenit oficial 🥹",
-            highlight: "Momentul când am devenit iubit și iubită",
-            description: "În 1h53 ne-am spus ce simțeam și am devenit iubit și iubită. Cel mai bine folosit timp."
+            title: "Apelul din 19 septembrie 🥹",
+            highlight: "Când am zis că suntem împreună",
+            description: "În aproape 2 ore ne-am spus tot ce aveam pe suflet și am stabilit oficial că suntem noi doi."
           }
         ]
       },
       portrait: {
-        title: "Cati & Ștefan • 19 septembrie 2026 • Împreună, dincolo de kilometri",
-        badge: "Momentul în care povestea a devenit a noastră"
+        title: "Cati & Ștefan • 19 septembrie 2026",
+        badge: "Din ziua în care am devenit oficial iubit și iubită"
       },
       finalPrompt: {
-        badge: "Ultimul secret 💌",
-        message: "A rămas o scrisoare închisă în ceară roșie. Apasă pe pecete, e pentru tine."
+        badge: "Amintiri & Surprize 🎁",
+        message: "Mai am câteva surprize pentru tine înainte de scrisoarea finală. Hai să le vezi!"
       }
     }
   ],

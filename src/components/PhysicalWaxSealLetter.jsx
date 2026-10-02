@@ -78,7 +78,7 @@ export function PhysicalWaxSealLetter({ isVisible }) {
             {letter.recipientTag}
           </span>
           <h3 className="mt-2 font-serif text-3xl font-medium text-ink sm:text-4xl md:text-5xl">
-            O scrisoare pentru inima ta
+            O scrisoare pentru tine
           </h3>
           <p className="mt-3 text-sm sm:text-base font-serif italic text-rose-900/90 font-medium max-w-md leading-relaxed">
             {letter.waxPrompt}

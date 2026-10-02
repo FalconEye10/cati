@@ -49,17 +49,17 @@ export function TomorrowCapsule() {
       <div className="relative rounded-3xl border border-rose-200/80 bg-white/75 p-8 shadow-candle backdrop-blur-md sm:p-10">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-sm font-semibold text-rose-800 uppercase tracking-wider">
           <Feather className="h-4 w-4 text-rose-600" />
-          Pentru fiecare zi
+          Pentru tine 💌
         </div>
 
         <h3 className="font-serif text-3xl font-medium text-ink sm:text-4xl">
-          Un răvaș pentru mâine
+          Un bilet pentru mâine
         </h3>
         <p className="mt-2.5 text-sm leading-relaxed text-ink-muted sm:text-base">
-          Pentru serile în care suntem departe, trage un gând mic de la mine.
+          Când ți-e dor de mine sau suntem departe, trage un bilet de aici.
         </p>
 
-        {/* Zona interactivă a răvașului */}
+        {/* Zona interactivă a biletului */}
         <div className="my-8 min-h-[140px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             {isOpen ? (
@@ -72,7 +72,7 @@ export function TomorrowCapsule() {
                 className="relative w-full rounded-2xl border border-dashed border-rose-300 bg-[#FFF9F6] p-7 shadow-inner"
               >
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-rose-600 px-4 py-1 text-xs font-bold text-white uppercase tracking-widest shadow-xs">
-                  Gândul de azi
+                  Bilețelul de azi
                 </div>
 
                 <p className="font-serif text-xl italic leading-relaxed text-[#1C1215] sm:text-2xl">
@@ -94,7 +94,7 @@ export function TomorrowCapsule() {
                   <Sparkles className="h-8 w-8" />
                 </div>
                 <span className="text-sm text-ink-subtle">
-                  Apasă pe butonul de mai jos pentru a desface primul răvaș
+                  Apasă pe butonul de mai jos să tragi un bilet
                 </span>
               </motion.div>
             )}
@@ -110,7 +110,7 @@ export function TomorrowCapsule() {
             className="group flex min-h-[50px] items-center gap-2.5 rounded-full bg-gradient-to-r from-rose-700 to-rose-900 px-8 py-3.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 cursor-pointer active:scale-95"
           >
             <RefreshCw className={`h-4.5 w-4.5 transition-transform ${isAnimating ? 'animate-spin' : 'group-hover:rotate-45'}`} />
-            <span>{isOpen ? "Mai trage unul 🎲" : "Deschide un răvaș"}</span>
+            <span>{isOpen ? "Mai trage un bilet 🎲" : "Deschide un bilet 💌"}</span>
           </button>
         </div>
       </div>

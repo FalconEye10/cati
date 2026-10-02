@@ -113,7 +113,7 @@ export function SecretVault({ isUnlocked, onUnlock, onScrollToFirstChapter }) {
               {doorOpened ? (
                 <>
                   <Unlock className="h-5 w-5 text-rose-700" />
-                  <span>Mecanismul este deschis • Pășește în poveste</span>
+                  <span>Seiful e deschis! Hai să vezi ➜</span>
                   <ChevronDown className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
                 </>
               ) : (
@@ -124,9 +124,9 @@ export function SecretVault({ isUnlocked, onUnlock, onScrollToFirstChapter }) {
                   </span>
                   <span>
                     {isDialing
-                      ? 'Se descifrează combinația...'
+                      ? 'Se deschide...'
                       : vaultState === 'unlocking-bolts'
-                      ? 'Se retrag bolțurile de oțel...'
+                      ? 'Aproape gata...'
                       : vault.openButtonText}
                   </span>
                 </>

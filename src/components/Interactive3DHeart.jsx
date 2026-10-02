@@ -311,7 +311,7 @@ export function Interactive3DHeart() {
         <div className="flex flex-col items-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-xs sm:text-sm font-semibold text-rose-800 uppercase tracking-widest shadow-xs">
             <Sparkles className="h-4 w-4 text-rose-600" />
-            Inimă 3D interactivă
+            Inima noastră 3D ❤️
           </span>
 
           <h3 className="mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
@@ -319,7 +319,7 @@ export function Interactive3DHeart() {
           </h3>
 
           <p className="mt-2 max-w-md text-sm text-ink-subtle leading-relaxed">
-            Atinge ca să-i dai o bătaie, trage ca s-o vezi din toate părțile.
+            Apasă pe ea să vezi cum bate sau învârte-o cu degetul.
           </p>
         </div>
 
@@ -354,7 +354,7 @@ export function Interactive3DHeart() {
                 className="pointer-events-none absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-medium text-rose-900 shadow-sm border border-rose-200/80 backdrop-blur-xs"
               >
                 <Hand className="h-3.5 w-3.5 text-rose-600 animate-bounce" />
-                <span>Apasă pentru puls • Rotește</span>
+                <span>Apasă sau rotește</span>
               </motion.div>
             )}
           </AnimatePresence>
@@ -368,15 +368,15 @@ export function Interactive3DHeart() {
             className="group flex min-h-[48px] items-center gap-2.5 rounded-full bg-gradient-to-r from-rose-700 via-rose-800 to-rose-950 px-8 py-3 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 cursor-pointer active:scale-95"
           >
             <Heart className={`h-5 w-5 fill-rose-300 text-rose-300 transition-transform ${pulseActive ? 'scale-130' : 'group-hover:scale-115'}`} />
-            <span>Trimite un puls 💗</span>
+            <span>Fă-o să bată ❤️</span>
           </button>
 
           <div className="text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium">
             {heartbeatCount === 0 ? (
-              <span>Inima așteaptă primul tău semn...</span>
+              <span>Apasă pe ea și vezi ce se întâmplă 👀</span>
             ) : (
               <span>
-                Ai trimis <span className="font-sans font-bold text-rose-700">{heartbeatCount}</span> {heartbeatCount === 1 ? 'bătaie' : 'bătăi'} de inimă ❤️
+                I-ai dat <span className="font-sans font-bold text-rose-700">{heartbeatCount}</span> {heartbeatCount === 1 ? 'bătaie' : 'bătăi'} de inimă ❤️
               </span>
             )}
           </div>

@@ -574,36 +574,23 @@ export function DistanceBridgeSection({
 
       {/* BUTON DEBLOCARE ETAPA URMĂTOARE */}
       <div className="mt-10 mx-auto max-w-xl flex flex-col items-center gap-3 rounded-3xl border border-rose-200/90 bg-[#FFFDF9] p-5 sm:p-7 shadow-lg">
-        {(canProceed || isCompleted) && (
-          <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
-            <Heart className="h-4 w-4 fill-rose-600 text-rose-600 shrink-0" />
-            <span>
-              {chapterData?.activeAdvancePrompt || "Inimile s-au adunat! Hai spre Oradea."}
-            </span>
-          </div>
-        )}
+        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
+          <Heart className="h-4 w-4 fill-rose-600 text-rose-600 shrink-0" />
+          <span>
+            {canProceed
+              ? "Gata, suntem la 0 km! Hai să vezi cum a fost la Oradea."
+              : "Poți apropia inimile sau poți merge direct la Oradea ➜"}
+          </span>
+        </div>
 
         <button
           type="button"
           onClick={onUnlockNextStage}
-          disabled={!canProceed && !isCompleted}
-          className={`group flex min-h-[56px] items-center gap-3 rounded-full px-9 py-4 text-base sm:text-lg font-medium tracking-wide transition-all duration-300 focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none ${
-            canProceed || isCompleted
-              ? 'bg-gradient-to-r from-rose-800 to-rose-950 text-white shadow-md hover:scale-[1.02] hover:shadow-lg cursor-pointer'
-              : 'cursor-not-allowed bg-stone-100 text-stone-400 border border-stone-200'
-          }`}
+          className="group flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
         >
           <span>{chapterData?.nextButtonText || "Hai la Oradea ➜"}</span>
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
         </button>
-
-        {!canProceed && !isCompleted && (
-          <div className="max-w-md text-center mt-1">
-            <p className="text-xs sm:text-sm text-ink-subtle font-light">
-              {chapterData?.blockedAdvancePrompt || "Trage sliderul la 0 km și trimite o bătaie de inimă, altfel nu pornim 😌"}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

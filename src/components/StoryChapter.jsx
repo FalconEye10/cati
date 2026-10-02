@@ -112,7 +112,7 @@ export function StoryChapter({
       variants={revealVariants}
       initial="hidden"
       animate="visible"
-      className="relative mx-auto my-14 w-full max-w-3xl px-4 py-8 sm:px-6"
+      className="relative mx-auto my-14 w-full max-w-3xl px-4 py-8 sm:px-6 scroll-mt-24"
     >
       {/* Element de fundal cu efect de paralaxă la scroll (Cifra romană a capitolului) */}
       <motion.div
@@ -166,44 +166,29 @@ export function StoryChapter({
             />
           </div>
 
-          {/* Îndemn romantic clar înainte de întoarcerea cardului */}
-          {!hasFlippedCard && !isCompleted && (
-            <div className="mt-6 flex flex-col items-center max-w-lg mx-auto">
-              <div className="inline-flex items-center gap-2 rounded-full bg-rose-50/90 border border-rose-200/90 px-4 py-2 text-xs sm:text-sm font-medium text-rose-900 shadow-xs">
-                <Heart className="h-4 w-4 fill-rose-600 text-rose-600 animate-pulse" />
-                <span>{chapter.preFlipPrompt || "Întoarce poza, are ceva scris pe spate 👀"}</span>
-              </div>
+          {/* Butonul de avansare consecvent la baza capitolului 1 */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
+              <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
+              <span>
+                {hasFlippedCard
+                  ? (chapter.postUnlockPrompt || "Hai mai departe, că au urmat mulți kilometri între noi.")
+                  : (chapter.preFlipPrompt || "Apasă pe poză să vezi ce scrie pe spate sau mergi mai departe 👀")}
+              </span>
             </div>
-          )}
 
-          {/* Butonul de avansare cu îndemn romantic clar */}
-          <AnimatePresence>
-            {(hasFlippedCard || isCompleted) && (
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.5 }}
-                className="mt-8 flex flex-col items-center gap-3"
-              >
-                <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
-                  <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
-                  <span>
-                    {chapter.postUnlockPrompt || "Hai mai departe, că au urmat mulți kilometri între noi."}
-                  </span>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={onScrollToNext}
-                  className="group flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
-                >
-                  <span>{chapter.nextButtonText || "Hai mai departe ➜"}</span>
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            <button
+              type="button"
+              onClick={() => {
+                if (onChapterComplete) onChapterComplete(chapter.stageIndex);
+                if (onScrollToNext) onScrollToNext();
+              }}
+              className="group flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
+            >
+              <span>{chapter.nextButtonText || "Hai mai departe ➜"}</span>
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
         </div>
       )}
 
@@ -401,36 +386,27 @@ export function StoryChapter({
             </AnimatePresence>
           </div>
 
-          {/* Buton de avansare cu îndemn clar */}
-          <AnimatePresence>
-            {(hasFinishedClock || isCompleted) && (
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="mt-8 flex flex-col items-center gap-3"
-              >
-                <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
-                  <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
-                  <span>
-                    {chapter.nextPrompt || "Și de aici încolo lucrurile au devenit și mai faine. Hai să vezi."}
-                  </span>
-                </div>
+          {/* Buton de avansare consecvent la baza capitolului 3 */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-serif italic text-rose-900/90 font-medium max-w-md text-center">
+              <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
+              <span>
+                {chapter.nextPrompt || "Și de aici încolo lucrurile au devenit și mai faine. Hai să vezi."}
+              </span>
+            </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    onChapterComplete(chapter.stageIndex);
-                    onScrollToNext();
-                  }}
-                  className="group flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
-                >
-                  <span>{chapter.nextButtonText || "Hai să vezi ➜"}</span>
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            <button
+              type="button"
+              onClick={() => {
+                if (onChapterComplete) onChapterComplete(chapter.stageIndex);
+                if (onScrollToNext) onScrollToNext();
+              }}
+              className="group flex min-h-[56px] items-center gap-3 rounded-full bg-gradient-to-r from-rose-800 to-rose-950 px-9 py-4 text-base sm:text-lg font-medium tracking-wide text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:outline-none cursor-pointer"
+            >
+              <span>{chapter.nextButtonText || "Hai să vezi ➜"}</span>
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
         </div>
       )}
 

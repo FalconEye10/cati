@@ -69,7 +69,7 @@ export function PhysicalWaxSealLetter({ isVisible }) {
     <section
       id="final-letter-section"
       aria-label="Scrisoarea sigilată"
-      className="relative z-10 flex w-full flex-col items-center justify-center px-4 py-20 text-center"
+      className="relative z-10 flex w-full flex-col items-center justify-center px-4 py-20 text-center scroll-mt-24"
     >
       <div className="relative mx-auto flex w-full max-w-lg flex-col items-center">
         {/* Antet discret cu îndemn romantic clar */}

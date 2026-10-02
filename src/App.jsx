@@ -171,7 +171,7 @@ export function App() {
           <section
             id="chapter-5"
             aria-label="Capitolul 5 • Amintiri și Surprize"
-            className="relative z-10 my-16 space-y-14"
+            className="relative z-10 my-16 space-y-14 scroll-mt-24"
           >
             {/* ELEMENT 3D INTERACTIV: INIMA NOASTRĂ 3D & PULSUL IUBIRII */}
             <Interactive3DHeart />
